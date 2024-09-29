@@ -4,6 +4,10 @@ const videoNameDisplay = document.getElementById('video-name');
 let videoQueue = [];
 let videoNames = [];
 
+// Prevent the default behavior (open in new tab) for dragover and drop
+document.addEventListener('dragover', (e) => e.preventDefault());
+document.addEventListener('drop', (e) => e.preventDefault());
+
 dropArea.addEventListener('dragover', (e) => {
     e.preventDefault();
     dropArea.classList.add('dragging');
