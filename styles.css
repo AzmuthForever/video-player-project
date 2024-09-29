@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #121212;
+    color: white;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    padding: 20px;
+    width: 80%;
+    text-align: center;
+    transition: border 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#drop-area.dragging {
+    border-color: #fff;
+}
+
+#drop-area.hidden {
+    display: none;
+}
+
+video {
+    width: 100%;
+    height: 100vh;
+    display: none;
+    background-color: black;
+}
+
+#video-name {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.5s;
+    color: white;
+    font-size: 18px;
+}
+
+#video-name.show {
+    opacity: 1;
+}
